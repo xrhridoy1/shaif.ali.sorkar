@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
-import { ThemeProvider } from "next-themes";
 
-const sora = Sora({
-  variable: "--font-sora",
+const sora = Montserrat({
+  variable: "--font-mont",
   subsets: ["latin"]
 })
-
 
 export const metadata: Metadata = {
   title: "Shait A. Sarkar",
@@ -26,15 +24,8 @@ export default function RootLayout({
       <body
         className={`${sora.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class" // adds theme class to <html>
-          defaultTheme="light" // fallback theme
-          enableSystem={true} // respects system preference
-        >
-
-          <Navbar />
-          {children}
-        </ThemeProvider>
+        <Navbar />
+        {children}
       </body>
     </html>
   );
