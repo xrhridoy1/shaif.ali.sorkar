@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Hamburger from 'hamburger-react'
 import Link from 'next/link';
 import { navLink } from './Navbar';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
+
 
 const MobileMenu = () => {
     const [isOpen, setOpen] = useState(false)
@@ -20,7 +21,7 @@ const MobileMenu = () => {
             x: 0,
             transition: {
                 when: "beforeChildren",
-                staggerChildren: 0.1
+                staggerChildren: 0.2
             },
         }
     }
@@ -36,7 +37,7 @@ const MobileMenu = () => {
     return (
         <div>
             {/* hamburger menu  */}
-            <div className='relative z-10'>
+            <div className={`relative z-10 ${isOpen ? 'text-white' : 'text-primary'}`}>
                 <Hamburger toggled={isOpen} size={25} toggle={setOpen} />
             </div>
             {/* link  */}
@@ -45,13 +46,13 @@ const MobileMenu = () => {
                     variants={navTopVariant}
                     initial="close"
                     animate="open"
-                    className='absolute left-0 top-0 bg-red-50 dark:bg-neutral-900 w-full h-screen '>
+                    className='absolute left-0 top-0 bg-primary w-full h-screen '>
                     <ul className='flex flex-col justify-center items-center h-full w-full space-y-3'>
                         {navLink.map((link, key) => (
                             <motion.li
                                 variants={linkVariant}
                                 key={key}
-                                className="block w-full text-center capitalize group text-neutral-600 hover:text-neutral-900 transition-all duration-200 text-3xl dark:hover:text-neutral-200 dark:text-neutral-400 font-semibold"
+                                className="block w-full text-center capitalize group text-white transition-all duration-200 text-3xl  hover:text-white/80 font-semibold"
                                 onClick={handleOnClick}
                             >
                                 <Link href={link.link}>

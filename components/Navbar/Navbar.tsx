@@ -28,6 +28,7 @@ const Navbar = () => {
                                     alt='Shai ali sorkar jim'
                                     fill
                                     className='object-contain rounded-full overflow-hidden'
+                                    placeholder='blur'
                                 />
                             </div>
                             <p className='hidden md:block text-lg md:text-xl lg:text-2xl text-primary font-semibold'>Shaif A. Sarkar</p>
