@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
 const sora = Montserrat({
-  variable: "--font-mont",
+  variable: "--font-montserrat",
   subsets: ["latin"]
 })
 
