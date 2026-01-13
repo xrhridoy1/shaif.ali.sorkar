@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sora.variable} antialiased`}
+        className={`${sora.variable} antialiased overflow-x-hidden`}
       >
         <Navbar />
         {children}
