@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import LenisProvider from "@/components/Shared/LenisProvider";
 
 const sora = Montserrat({
   variable: "--font-montserrat",
@@ -20,12 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="lenis lenis-smooth">
       <body
         className={`${sora.variable} antialiased overflow-x-hidden`}
       >
         <Navbar />
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );

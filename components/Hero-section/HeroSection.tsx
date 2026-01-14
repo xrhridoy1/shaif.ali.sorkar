@@ -91,26 +91,7 @@ const HeroSection = () => {
                         </motion.section>
                     </motion.div>
 
-                    {/* <motion.div
-                        variants={heroRightVeriants}
-                        initial="initial"
-                        animate="animate"
-                        className='relative flex-1 w-full flex flex-col space-y-3 z-20'>
-                        <h1 variants={heroItem} className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-snug text-gray-700'>Hello, I&apos;m <br /> Shaif Ali Sarkar</h1>
-                        <p className='text-base lg:text-lg text-gray-600'>Creative and experienced Graphic Designer with a strong passion for visual storytelling and brand identity design. Skilled in creating eye-catching designs for social media and print media.</p>
-                        <div>
-                            <MainButton text="See More" />
-                            {/* <button className='px-6 py-2 bg-primary rounded text-white cursor-pointer hover:bg-primary/90 transition-all duration-100 ease-in'>See More</button> 
-                        </div>
-                        <section className='flex gap-1 overflow-hidden rounded mt-4 text-center'>
-                            {heroText.map((item, idx) => (
-                                <div key={idx} className='bg-secondary w-full flex flex-col items-center p-3 md:py-3 md:px-1 lg:p-6 gap-2'>
-                                    <p className='text-2xl font-semibold text-[#424E60]'>{item.value}</p>
-                                    <small className='text-gray-500'>{item.name}</small>
-                                </div>
-                            ))}
-                        </section>
-                    </motion.div> */}
+
                 </div>
             </section>
         </main >
