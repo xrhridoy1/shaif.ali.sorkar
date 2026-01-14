@@ -1,13 +1,23 @@
-// components/LenisProvider.tsx
-"use client";
+"use client"; // Required if using Next.js App Router
 
-import React, { PropsWithChildren } from "react";
-import { ReactLenis } from "@studio-freight/react-lenis";
-import "lenis/dist/lenis.css"; // Optional: Import recommended CSS
+import React, { ReactNode } from "react";
+import { ReactLenis } from "lenis/react";
 
-const LenisProvider = ({ children }: PropsWithChildren) => {
+interface LenisProviderProps {
+    children: ReactNode;
+}
+
+const LenisProvider = ({ children }: LenisProviderProps) => {
     return (
-        <ReactLenis root options={{ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) }}>
+        <ReactLenis
+            root
+            options={{
+                duration: 1.2,
+                // Standard "expo" out easing
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smoothWheel: true,
+            }}
+        >
             {children}
         </ReactLenis>
     );
