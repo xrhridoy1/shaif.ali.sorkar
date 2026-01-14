@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.11",
-    "@studio-freight/react-lenis": "^0.0.47",
     "animate.css": "^4.1.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

@@ -1,7 +1,8 @@
-"use client"; // Required if using Next.js App Router
+"use client";
 
 import React, { ReactNode } from "react";
 import { ReactLenis } from "lenis/react";
+import "lenis/dist/lenis.css"; // Essential for automatic scroll management
 
 interface LenisProviderProps {
     children: ReactNode;
@@ -13,9 +14,10 @@ const LenisProvider = ({ children }: LenisProviderProps) => {
             root
             options={{
                 duration: 1.2,
-                // Standard "expo" out easing
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 smoothWheel: true,
+                // autoRaf: true is default in newer versions, 
+                // but check your specific version requirements
             }}
         >
             {children}
