@@ -28,9 +28,11 @@ const MobileMenu = () => {
     const linkVariant = {
         close: {
             opacity: 0,
+            y:-30
         },
         open: {
             opacity: 1,
+            y:0
         }
     }
 
@@ -52,7 +54,7 @@ const MobileMenu = () => {
                             <motion.li
                                 variants={linkVariant}
                                 key={key}
-                                className="block w-full text-center capitalize group text-white transition-all duration-200 text-3xl  hover:text-white/80 font-semibold"
+                                className="block w-full text-center capitalize text-white text-3xl font-semibold"
                                 onClick={handleOnClick}
                             >
                                 <Link href={link.link}>
